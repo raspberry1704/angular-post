@@ -1,0 +1,10 @@
+<h1>Posts<h1>
+<ul *ngFor="let p of this.posts">
+    <app-post [post]="p"></app-post>
+</ul>
+<div>
+    <p>Créer un nouveau post</p>
+    <input type="text" class="form-control" [(ngModel)]="this.titletmp">
+    <textarea name="Contenu" class="form-control" rows="8" cols="80" [(ngModel)]="this.contenttmp"></textarea>
+    <button (click)="ajouterPost()">Soumettre le nouveau post</button>
+</div>

@@ -1,0 +1,7 @@
+<li [ngClass]="{'list-group-item-success': this.post.lireLoveIts() == true, 'list-group-item-danger': !this.post.lireLoveIts() == true }">
+    <h2> {{ this.post.lireTitle() }} </h2>
+    <p> {{ this.post.lireCreatedAt() | date: 'mm/dd/YYYY, HH:MM'}}
+    <p> {{ this.post.lireContent() }} </p>
+    <button (click)="this.ajouterLove()">Love it</button>
+    <button (click)="this.enleverLove()">Don't love it</button>
+</li>
